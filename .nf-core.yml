@@ -16,6 +16,7 @@ lint:
     - docs/images/nf-core-needles_logo_dark.png
     - .github/ISSUE_TEMPLATE/config.yml
   files_unchanged:
+    - .github/workflows/linting.yml
     - .gitignore
     - assets/multiqc_config.yml
     - conf/igenomes.config
