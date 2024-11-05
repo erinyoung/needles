@@ -21,7 +21,7 @@
             "external_clusters": null
         }
     ],
-    "197" : [
+    "197": [
         {
             "species": "Campylobacter jejuni",
             "version": "v1",
@@ -32,7 +32,7 @@
             "external_clusters": null
         }
     ],
-    "5476" : [
+    "5476": [
         {
             "species": "Candida albicans",
             "version": "v1",
@@ -43,7 +43,7 @@
             "external_clusters": null
         }
     ],
-    "1351" : [
+    "1351": [
         {
             "species": "Enterococcus faecalis",
             "version": "v1",
@@ -54,7 +54,7 @@
             "external_clusters": null
         }
     ],
-    "1352" : [
+    "1352": [
         {
             "species": "Enterococcus faecium",
             "version": "v2",
@@ -65,7 +65,7 @@
             "external_clusters": null
         }
     ],
-    "562" : [
+    "562": [
         {
             "species": "Escherichia coli",
             "version": "v2",
@@ -76,7 +76,7 @@
             "external_clusters": null
         }
     ],
-    "727" : [
+    "727": [
         {
             "species": "Haemophilus influenzae",
             "version": "v2",
@@ -87,7 +87,7 @@
             "external_clusters": null
         }
     ],
-    "210" : [
+    "210": [
         {
             "species": "Helicobacter pylori",
             "version": "v1",
@@ -98,7 +98,7 @@
             "external_clusters": null
         }
     ],
-    "197911" : [
+    "197911": [
         {
             "species": "Influenza virus",
             "version": "v1",
@@ -109,7 +109,7 @@
             "external_clusters": null
         }
     ],
-    "573" : [
+    "573": [
         {
             "species": "Klebsiella pneumoniae",
             "version": "v3",
@@ -120,7 +120,7 @@
             "external_clusters": null
         }
     ],
-    "446" : [
+    "446": [
         {
             "species": "Legionella pneumophila",
             "version": "v1",
@@ -131,7 +131,7 @@
             "external_clusters": null
         }
     ],
-    "1639" : [
+    "1639": [
         {
             "species": "Listeria monocytogenes",
             "version": "v2",
@@ -142,7 +142,7 @@
             "external_clusters": null
         }
     ],
-    "36809" : [
+    "36809": [
         {
             "species": "Mycobacterium abscessus",
             "version": "v1",
@@ -153,7 +153,7 @@
             "external_clusters": "DCC"
         }
     ],
-    "1773" : [
+    "1773": [
         {
             "species": "Mycobacterium tuberculosis",
             "version": "v1",
@@ -164,7 +164,7 @@
             "external_clusters": "Lineage"
         }
     ],
-    "485" : [
+    "485": [
         {
             "species": "Neisseria gonorrhoeae",
             "version": "v1",
@@ -175,7 +175,7 @@
             "external_clusters": null
         }
     ],
-    "487_2" : [
+    "487_2": [
         {
             "species": "Neisseria meningitidis",
             "version": "v1",
@@ -186,7 +186,7 @@
             "external_clusters": null
         }
     ],
-    "487" : [
+    "487": [
         {
             "species": "Neisseria meningitidis",
             "version": "vCCDC",
@@ -197,7 +197,7 @@
             "external_clusters": null
         }
     ],
-    "287" : [
+    "287": [
         {
             "species": "Pseudomonas aeruginosa",
             "version": "v1",
@@ -208,7 +208,7 @@
             "external_clusters": null
         }
     ],
-    "4932" : [
+    "4932": [
         {
             "species": "Saccharomyces cerevisiae",
             "version": "v1",
@@ -219,7 +219,7 @@
             "external_clusters": null
         }
     ],
-    "590" : [
+    "590": [
         {
             "species": "Salmonella sp.",
             "version": "v1",
@@ -230,7 +230,7 @@
             "external_clusters": null
         }
     ],
-    "1280" : [
+    "1280": [
         {
             "species": "Staphylococcus aureus",
             "version": "v1",
@@ -241,7 +241,7 @@
             "external_clusters": null
         }
     ],
-    "40324" : [
+    "40324": [
         {
             "species": "Stenotrophomonas maltophilia",
             "version": "v1",
@@ -252,7 +252,7 @@
             "external_clusters": null
         }
     ],
-    "1311" : [
+    "1311": [
         {
             "species": "Streptococcus agalactiae",
             "version": "v1",
@@ -263,7 +263,7 @@
             "external_clusters": null
         }
     ],
-    "1334" : [
+    "1334": [
         {
             "species": "Streptococcus dysgalactiae subspecies equisimilis",
             "version": "v1",
@@ -274,7 +274,7 @@
             "external_clusters": null
         }
     ],
-    "28037" : [
+    "28037": [
         {
             "species": "Streptococcus mitis",
             "version": "v1",
@@ -285,7 +285,7 @@
             "external_clusters": null
         }
     ],
-    "1313" : [
+    "1313": [
         {
             "species": "Streptococcus pneumoniae",
             "version": "v4",
@@ -296,7 +296,7 @@
             "external_clusters": "GPSC"
         }
     ],
-    "1314" : [
+    "1314": [
         {
             "species": "Streptococcus pyogenes",
             "version": "v1",
@@ -307,7 +307,7 @@
             "external_clusters": null
         }
     ],
-    "1307" : [
+    "1307": [
         {
             "species": "Streptococcus suis",
             "version": "v1",

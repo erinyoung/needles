@@ -1,8 +1,8 @@
 process ASSIGN {
     tag "assigning input fastas to ${species}"
-    label 'process_medium'
+    label 'process_low'
 
-    conda "bioconda::poppunk:2.7.0"
+    conda "bioconda::poppunk=2.7.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/poppunk:2.7.0--py310h048fc13_0':
         'biocontainers/poppunk:2.7.0--py310h048fc13_0' }"
@@ -21,7 +21,6 @@ process ASSIGN {
 
     script:
     def args = task.ext.args ?: ''
-    
     """
     poppunk_assign \\
         $args \\

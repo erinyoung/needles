@@ -21,11 +21,10 @@ sample2,sample2.fasta
 sample3,sample3.fasta
 ```
 
-| Column    | Description                                                                                                                                                                            |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sample`  | Custom sample name. This entry will be identical for multiple sequencing libraries/runs from the same sample. Spaces in sample names are automatically converted to underscores (`_`). |
-| `fasta` | Full path to fasta file. File can be gzipped or uncompressed with extensions of "fa/fasta/fna" or "fa.gz/fasta.gz/fna.gz".                                                             |
-
+| Column   | Description                                                                                                                                                                            |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sample` | Custom sample name. This entry will be identical for multiple sequencing libraries/runs from the same sample. Spaces in sample names are automatically converted to underscores (`_`). |
+| `fasta`  | Full path to fasta file. File can be gzipped or uncompressed with extensions of "fa/fasta/fna" or "fa.gz/fasta.gz/fna.gz".                                                             |
 
 An [example samplesheet](../assets/samplesheet.csv) has been provided with the pipeline.
 
@@ -70,7 +69,6 @@ outdir: './results/'
 taxid: '727'
 <...>
 ```
-
 
 ### Updating the pipeline
 
