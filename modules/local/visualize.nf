@@ -1,6 +1,6 @@
 process VISUALIZE {
     tag "visualize clusters for ${species}"
-    label 'process_medium'
+    label 'process_low'
 
     conda "bioconda::poppunk=2.7.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?

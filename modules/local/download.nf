@@ -1,6 +1,6 @@
 process DOWNLOAD {
     tag "downloading reference for ${species}"
-    label 'process_medium'
+    label 'process_low'
 
     // using same container as other processes for simplicity
     conda "bioconda::poppunk=2.7.0"
