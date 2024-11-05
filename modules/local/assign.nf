@@ -21,7 +21,6 @@ process ASSIGN {
 
     script:
     def args = task.ext.args ?: ''
-    
     """
     poppunk_assign \\
         $args \\

@@ -10,7 +10,7 @@ process VISUALIZE {
     input:
     tuple val(species), path(ref)
     path query
-    
+
     output:
     path "viz", emit: viz, optional: true
     path "versions.yml", emit: versions
