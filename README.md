@@ -39,7 +39,7 @@ Each row represents a fasta file.
 
 The next step is to select a taxid. A list of poppunk databases are in json format at (assets/poppunk_db.json)(./assets/poppunk_db.json). The default taxid is `1314` for _Streptococcus pyogenes_. 
 
-Current options:
+Current options for taxid:
 - "470" : "Acinetobacter baumannii"
 - "520" : "Bordetella pertussis"
 - "197" : "Campylobacter jejuni"
