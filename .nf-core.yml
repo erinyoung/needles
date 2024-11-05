@@ -1,13 +1,27 @@
 bump_version: null
 lint:
+  actions_awsfulltest: False
   files_exist:
+  - .gitattributes
+  - assets/multiqc_config.yml
+  - conf/igenomes.config
+  - conf/igenomes_ignored.config  
+  - .github/workflows/branch.yml
+  - assets/multiqc_config.yml
   - CODE_OF_CONDUCT.md
+  - .github/workflows/awstest.yml
   - assets/nf-core-needles_logo_light.png
+  - .github/workflows/awsfulltest.yml
   - docs/images/nf-core-needles_logo_light.png
   - docs/images/nf-core-needles_logo_dark.png
   - .github/ISSUE_TEMPLATE/config.yml
   files_unchanged:
+  - .gitignore
+  - assets/multiqc_config.yml
+  - conf/igenomes.config      
+  - .github/workflows/branch.yml
   - CODE_OF_CONDUCT.md
+  - conf/igenomes_ignored.config
   - assets/nf-core-needles_logo_light.png
   - docs/images/nf-core-needles_logo_light.png
   - docs/images/nf-core-needles_logo_dark.png
