@@ -1,5 +1,3 @@
-
-
 # erinyoung/needles
 
 [![GitHub Actions CI Status](https://github.com/erinyoung/needles/actions/workflows/ci.yml/badge.svg)](https://github.com/erinyoung/needles/actions/workflows/ci.yml)
@@ -17,6 +15,7 @@
 **erinyoung/needles** is a bioinformatics pipeline to download a corresponding pre-built poppunk database to use on input fasta files.
 
 The steps are as follows:
+
 1. Download the poppunk database for taxid (https://www.bacpop.org/poppunk/)
 2. Assign fasta files to clusters
 3. Visualize (for microreact is the default)
@@ -37,9 +36,10 @@ sample1,sample1.fasta
 
 Each row represents a fasta file.
 
-The next step is to select a taxid. A list of poppunk databases are in json format at (assets/poppunk_db.json)(./assets/poppunk_db.json). The default taxid is `1314` for _Streptococcus pyogenes_. 
+The next step is to select a taxid. A list of poppunk databases are in json format at (assets/poppunk*db.json)(./assets/poppunk_db.json). The default taxid is `1314` for \_Streptococcus pyogenes*.
 
 Current options:
+
 - "470" : "Acinetobacter baumannii"
 - "520" : "Bordetella pertussis"
 - "197" : "Campylobacter jejuni"
@@ -70,9 +70,7 @@ Current options:
 - "1314" : "Streptococcus pyogenes"
 - "1307" : "Streptococcus suis"
 
-
 Now, you can run the pipeline using:
-
 
 ```bash
 nextflow run erinyoung/needles \
