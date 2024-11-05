@@ -1,0 +1,36 @@
+bump_version: null
+lint:
+  files_exist:
+  - CODE_OF_CONDUCT.md
+  - assets/nf-core-needles_logo_light.png
+  - docs/images/nf-core-needles_logo_light.png
+  - docs/images/nf-core-needles_logo_dark.png
+  - .github/ISSUE_TEMPLATE/config.yml
+  files_unchanged:
+  - CODE_OF_CONDUCT.md
+  - assets/nf-core-needles_logo_light.png
+  - docs/images/nf-core-needles_logo_light.png
+  - docs/images/nf-core-needles_logo_dark.png
+  - .github/ISSUE_TEMPLATE/bug_report.yml
+  multiqc_config: False
+  nextflow_config:
+  - manifest.name
+  - manifest.homePage
+  - validation.help.beforeText
+  - validation.help.afterText
+  - validation.summary.beforeText
+  - validation.summary.afterText
+nf_core_version: 3.0.2
+org_path: null
+repository_type: pipeline
+template:
+  author: Erin Young
+  description: poppunk workflow
+  force: true
+  is_nfcore: false
+  name: needles
+  org: erinyoung
+  outdir: .
+  skip_features: null
+  version: 0.0.2411
+update: null
