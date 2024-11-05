@@ -35,13 +35,13 @@ jobs:
           - "singularity"
         test_name:
           - "test"
-        isMaster:
-          - ${{ github.base_ref == 'master' }}
+        ismain:
+          - ${{ github.base_ref == 'main' }}
         # Exclude conda and singularity on dev
         exclude:
-          - isMaster: false
+          - ismain: false
             profile: "conda"
-          - isMaster: false
+          - ismain: false
             profile: "singularity"
     steps:
       - name: Check out pipeline code
