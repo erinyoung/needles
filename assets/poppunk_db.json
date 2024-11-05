@@ -1,0 +1,321 @@
+{
+    "470": [
+        {
+            "species": "Acinetobacter baumannii",
+            "version": "v1",
+            "isolates": 8263,
+            "links": null,
+            "references": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Acinetobacter_baumannii_v1_refs.tar.bz2",
+            "all": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Acinetobacter_baumannii_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "520": [
+        {
+            "species": "Bordetella pertussis",
+            "version": "v1",
+            "isolates": 339,
+            "links": "https://www.biorxiv.org/content/10.1101/2022.01.20.475763v1",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Bordetella_pertussis_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Bordetella_pertussis_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "197" : [
+        {
+            "species": "Campylobacter jejuni",
+            "version": "v1",
+            "isolates": 40303,
+            "links": "https://www.ncbi.nlm.nih.gov/pathogens/",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Campylobacter_jejuni_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Campylobacter_jejuni_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "5476" : [
+        {
+            "species": "Candida albicans",
+            "version": "v1",
+            "isolates": null,
+            "links": null,
+            "references": "Coming soon",
+            "all": null,
+            "external_clusters": null
+        }
+    ],
+    "1351" : [
+        {
+            "species": "Enterococcus faecalis",
+            "version": "v1",
+            "isolates": 2026,
+            "links": "https://doi.org/10.1038/s41467-021-21749-5",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/enterococcus_faecalis_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/enterococcus_faecalis_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "1352" : [
+        {
+            "species": "Enterococcus faecium",
+            "version": "v2",
+            "isolates": 1658,
+            "links": "https://www.nature.com/articles/s41564-020-00806-7",
+            "references": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Enterococcus_faecium_v2_refs.tar.bz2",
+            "all": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Enterococcus_faecium_v2_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "562" : [
+        {
+            "species": "Escherichia coli",
+            "version": "v2",
+            "isolates": 30138,
+            "links": ["https://doi.org/10.1099/mgen.0.000499", "https://www.ncbi.nlm.nih.gov/pathogens/"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/escherichia_coli_v2_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/escherichia_coli_v2_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "727" : [
+        {
+            "species": "Haemophilus influenzae",
+            "version": "v2",
+            "isolates": 2289,
+            "links": "https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.001281",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Haemophilus_influenzae_v2_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Haemophilus_influenzae_v2_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "210" : [
+        {
+            "species": "Helicobacter pylori",
+            "version": "v1",
+            "isolates": 2201,
+            "links": null,
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Helicobacter_pylori_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Helicobacter_pylori_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "197911" : [
+        {
+            "species": "Influenza virus",
+            "version": "v1",
+            "isolates": null,
+            "links": null,
+            "references": "Coming soon",
+            "all": null,
+            "external_clusters": null
+        }
+    ],
+    "573" : [
+        {
+            "species": "Klebsiella pneumoniae",
+            "version": "v3",
+            "isolates": 1361,
+            "links": "https://doi.org/10.1038/s41564-019-0492-8",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Klebsiella_pneumoniae_v3_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Klebsiella_pneumoniae_v3_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "446" : [
+        {
+            "species": "Legionella pneumophila",
+            "version": "v1",
+            "isolates": 3116,
+            "links": null,
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Legionella_pneumophila_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Legionella_pneumophila_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "1639" : [
+        {
+            "species": "Listeria monocytogenes",
+            "version": "v2",
+            "isolates": 40474,
+            "links": "https://www.ncbi.nlm.nih.gov/pathogens/",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/listeria_monocytogenes_v2_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/listeria_monocytogenes_v2_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "36809" : [
+        {
+            "species": "Mycobacterium abscessus",
+            "version": "v1",
+            "isolates": 861,
+            "links": "https://doi.org/10.1038/s41564-021-00963-3",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/mycobacterium_abscessus_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/mycobacterium_abscessus_v1.tar.bz2",
+            "external_clusters": "DCC"
+        }
+    ],
+    "1773" : [
+        {
+            "species": "Mycobacterium tuberculosis",
+            "version": "v1",
+            "isolates": 13170,
+            "links": "https://doi.org/10.1371/journal.pbio.3001421",
+            "references": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Mycobacterium_tuberculosis_v1_refs.tar.bz2",
+            "all": "http://ftp.ebi.ac.uk/pub/databases/pp_dbs/Mycobacterium_tuberculosis_v1_full.tar.bz2",
+            "external_clusters": "Lineage"
+        }
+    ],
+    "485" : [
+        {
+            "species": "Neisseria gonorrhoeae",
+            "version": "v1",
+            "isolates": 8801,
+            "links": "https://doi.org/10.1371/journal.pbio.3001421",
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Neisseria_gonorrhoeae_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Neisseria_gonorrhoeae_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "487_2" : [
+        {
+            "species": "Neisseria meningitidis",
+            "version": "v1",
+            "isolates": 33379,
+            "links": ["https://doi.org/10.12688/wellcomeopenres.14826.1"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Neisseria_meningitidis_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Neisseria_meningitidis_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "487" : [
+        {
+            "species": "Neisseria meningitidis",
+            "version": "vCCDC",
+            "isolates": 26801,
+            "links": ["https://github.com/bacpop/PopPUNK/issues/267"],
+            "references": null,
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Neisseria_meningitidis_vCCDC.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "287" : [
+        {
+            "species": "Pseudomonas aeruginosa",
+            "version": "v1",
+            "isolates": 6082,
+            "links": ["https://doi.org/10.1371/journal.pbio.3001421"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Pseudomonas_aeruginosa_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Pseudomonas_aeruginosa_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "4932" : [
+        {
+            "species": "Saccharomyces cerevisiae",
+            "version": "v1",
+            "isolates": null,
+            "links": null,
+            "references": "Coming soon",
+            "all": null,
+            "external_clusters": null
+        }
+    ],
+    "590" : [
+        {
+            "species": "Salmonella sp.",
+            "version": "v1",
+            "isolates": 335647,
+            "links": null,
+            "references": "Coming soon",
+            "all": null,
+            "external_clusters": null
+        }
+    ],
+    "1280" : [
+        {
+            "species": "Staphylococcus aureus",
+            "version": "v1",
+            "isolates": 42117,
+            "links": ["https://staphopia.emory.edu/"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/staphylococcus_aureus_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/staphylococcus_aureus_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "40324" : [
+        {
+            "species": "Stenotrophomonas maltophilia",
+            "version": "v1",
+            "isolates": 1210,
+            "links": ["https://doi.org/10.1038/s41467-020-15123-0"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Stenotrophomonas_maltophilia_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Stenotrophomonas_maltophilia_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "1311" : [
+        {
+            "species": "Streptococcus agalactiae",
+            "version": "v1",
+            "isolates": 18029,
+            "links": ["https://doi.org/10.12688/wellcomeopenres.14826.1"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_agalactiae_v1_refs.tar.gz",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_agalactiae_v1_full.tar.gz",
+            "external_clusters": null
+        }
+    ],
+    "1334" : [
+        {
+            "species": "Streptococcus dysgalactiae subspecies equisimilis",
+            "version": "v1",
+            "isolates": 501,
+            "links": null,
+            "references": null,
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_dysgalactiae_subspecies_equisimilis_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "28037" : [
+        {
+            "species": "Streptococcus mitis",
+            "version": "v1",
+            "isolates": 322,
+            "links": ["https://doi.org/10.1128/jcm.00802-22"],
+            "references": null,
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_mitis_v1_full.tar.gz",
+            "external_clusters": null
+        }
+    ],
+    "1313" : [
+        {
+            "species": "Streptococcus pneumoniae",
+            "version": "v4",
+            "isolates": 42157,
+            "links": ["https://www.pneumogen.net/gps/"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_pneumoniae_v4_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_pneumoniae_v4_full.tar.bz2",
+            "external_clusters": "GPSC"
+        }
+    ],
+    "1314" : [
+        {
+            "species": "Streptococcus pyogenes",
+            "version": "v1",
+            "isolates": 2084,
+            "links": ["https://doi.org/10.1038/s41588-019-0417-8"],
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_pyogenes_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_pyogenes_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ],
+    "1307" : [
+        {
+            "species": "Streptococcus suis",
+            "version": "v1",
+            "isolates": 2424,
+            "links": null,
+            "references": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_suis_v1_refs.tar.bz2",
+            "all": "https://ftp.ebi.ac.uk/pub/databases/pp_dbs/Streptococcus_suis_v1_full.tar.bz2",
+            "external_clusters": null
+        }
+    ]
+}

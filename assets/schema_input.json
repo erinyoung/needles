@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/erinyoung/needles/master/assets/schema_input.json",
+    "title": "erinyoung/needles pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "errorMessage": "Sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "fasta": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.fn?a(sta)?(\\.gz)?$",
+                "errorMessage": "Fasta file for sample must be provided, cannot contain spaces and must have extension '.fa', '.fasta', 'fna', '.fa.gz', 'fasta.gz', or 'fna.gz'"
+            }
+        },
+        "required": ["sample", "fasta"]
+    }
+}
