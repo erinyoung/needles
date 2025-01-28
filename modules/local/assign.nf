@@ -4,8 +4,8 @@ process ASSIGN {
 
     conda "bioconda::poppunk=2.7.5"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/poppunk:2.7.0--py310h048fc13_0':
-        'biocontainers/poppunk:2.7.0--py310h048fc13_0' }"
+        'https://depot.galaxyproject.org/singularity/poppunk:2.7.2--py310h4d0eb5b_2':
+        'biocontainers/poppunk:2.7.2--py310h4d0eb5b_2' }"
 
     input:
     path qfile

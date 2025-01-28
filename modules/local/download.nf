@@ -5,8 +5,8 @@ process DOWNLOAD {
     // using same container as other processes for simplicity
     conda "bioconda::poppunk=2.7.5"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/poppunk:2.7.0--py310h048fc13_0':
-        'biocontainers/poppunk:2.7.0--py310h048fc13_0' }"
+        'https://depot.galaxyproject.org/singularity/poppunk:2.7.2--py310h4d0eb5b_2':
+        'biocontainers/poppunk:2.7.2--py310h4d0eb5b_2' }"
 
     input:
     tuple val(species), val(url)
@@ -20,7 +20,7 @@ process DOWNLOAD {
 
     script:
     """
-    wget $url
+    wget --no-check-certificate $url
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
