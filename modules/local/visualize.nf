@@ -8,7 +8,7 @@ process VISUALIZE {
         'biocontainers/poppunk:2.7.2--py310h4d0eb5b_2' }"
 
     input:
-    tuple val(species), path(ref)
+    path ref
     path query
 
     output:
