@@ -1,5 +1,6 @@
 bump_version: null
 lint:
+  actions_ci: False
   actions_awsfulltest: False
   files_exist:
     - .gitattributes
@@ -15,6 +16,7 @@ lint:
     - docs/images/nf-core-needles_logo_light.png
     - docs/images/nf-core-needles_logo_dark.png
     - .github/ISSUE_TEMPLATE/config.yml
+    - .github/workflows/ci.yml
   files_unchanged:
     - .github/workflows/linting.yml
     - .gitignore
@@ -27,6 +29,7 @@ lint:
     - docs/images/nf-core-needles_logo_light.png
     - docs/images/nf-core-needles_logo_dark.png
     - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/workflows/ci.yml
   multiqc_config: False
   nextflow_config:
     - manifest.name
