@@ -1,5 +1,6 @@
 bump_version: null
 lint:
+  modules_json: False
   actions_ci: False
   actions_awsfulltest: False
   files_exist:
