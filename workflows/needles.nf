@@ -43,18 +43,12 @@ workflow NEEDLES {
     DECOMPRESS (
         ch_db_file
     )
-    ch_versions = ch_versions.mix(DECOMPRESS.out.versions)
-
-    DECOMPRESS.out.db
-        .flatten()
-        .filter { it -> !(it =~ /versions.yml/ )}
-        .set { ch_assign }
 
     // run assign
     ASSIGN (
         ch_query_list,
         ch_fastas.collect(),
-        ch_assign
+        DECOMPRESS.out.db
     )
     ch_versions = ch_versions.mix(ASSIGN.out.versions)
 
