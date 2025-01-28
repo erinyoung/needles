@@ -1,5 +1,5 @@
-process DOWNLOAD {
-    tag "downloading reference for ${species}"
+process DECOMPRESS {
+    tag "decompressing reference"
     label 'process_low'
 
     // using same container as other processes for simplicity
@@ -9,10 +9,10 @@ process DOWNLOAD {
         'biocontainers/poppunk:2.7.2--py310h4d0eb5b_2' }"
 
     input:
-    tuple val(species), val(url)
+    val(file)
 
     output:
-    path("*z*"), emit: file
+    path "*", emit: db
     path "versions.yml", emit: versions
 
     when:
@@ -20,12 +20,12 @@ process DOWNLOAD {
 
     script:
     """
-    wget --no-check-certificate $url
+    # decompress it
+    tar -xvjf ${file}
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        species: ${species}
-        db_url: ${url}
+        db_file: ${file}
     END_VERSIONS
     """
 
@@ -35,8 +35,7 @@ process DOWNLOAD {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        species: ${species}
-        db_url: ${url}
+        db_file: ${file}
     END_VERSIONS
     """
 }

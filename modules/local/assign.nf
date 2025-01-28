@@ -1,16 +1,16 @@
 process ASSIGN {
-    tag "assigning input fastas to ${species}"
-    label 'process_low'
+    tag "assigning input fastas to db"
+    label 'process_high'
 
-    conda "bioconda::poppunk=2.7.0"
+    conda "bioconda::poppunk=2.7.5"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/poppunk:2.7.0--py310h048fc13_0':
-        'biocontainers/poppunk:2.7.0--py310h048fc13_0' }"
+        'https://depot.galaxyproject.org/singularity/poppunk:2.7.2--py310h4d0eb5b_2':
+        'biocontainers/poppunk:2.7.2--py310h4d0eb5b_2' }"
 
     input:
     path qfile
     path fasta
-    tuple val(species), path(db)
+    path(db)
 
     output:
     path "clusters", emit: db
@@ -37,7 +37,6 @@ process ASSIGN {
     """
 
     stub:
-    def args = task.ext.args ?: ''
     """"
     mkdir clusters
 

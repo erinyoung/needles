@@ -32,6 +32,8 @@ workflow PIPELINE_INITIALISATION {
     nextflow_cli_args //   array: List of positional nextflow CLI args
     outdir            //  string: The output directory where the results will be saved
     input             //  string: Path to input samplesheet
+    taxid             //  string: taxid for json file
+    db                //  string: Path to compressed poppunk database
 
     main:
 
@@ -83,10 +85,31 @@ workflow PIPELINE_INITIALISATION {
         }
         .set {ch_query_list}
 
+    if (db) {
+        // using existing database
+        Channel
+            .fromPath(db, checkIfExists: true, type: "file")
+            .set { ch_db }
+
+    } else {
+
+        // Get URL for poppunk database download from taxid
+        Channel
+            .fromPath("${projectDir}/assets/poppunk_db.json")
+            .splitJson()
+            .filter {
+                it.key == taxid.replace("tx:","")
+            }
+            .map { it -> tuple(it.value.species[0], it.value.references[0]) }
+            .first()
+            .set { ch_db }
+    }
+
     emit:
     fastas      = ch_samplesheet.map{it -> it[1]}
     query_list  = ch_query_list
     versions    = ch_versions
+    db          = ch_db
 }
 
 /*
