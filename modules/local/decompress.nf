@@ -13,7 +13,6 @@ process DECOMPRESS {
 
     output:
     path "*", emit: db
-    path "versions.yml", emit: versions
 
     when:
     task.ext.when == null || task.ext.when
@@ -22,20 +21,10 @@ process DECOMPRESS {
     """
     # decompress it
     tar -xvjf ${file}
-
-    cat <<-END_VERSIONS > versions.yml
-    "${task.process}":
-        db_file: ${file}
-    END_VERSIONS
     """
 
     stub:
     """
     mkdir db
-
-    cat <<-END_VERSIONS > versions.yml
-    "${task.process}":
-        db_file: ${file}
-    END_VERSIONS
     """
 }
