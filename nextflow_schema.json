@@ -13,11 +13,14 @@
             "properties": {
                 "taxid": {
                     "type": "string",
-                    "default": "1313",
+                    "default": "tx:1313",
                     "description": "taxid to use for poppunk database download"
+                },
+                "db": {
+                    "type": "string",
+                    "description": "compressed poppunk database"
                 }
-            },
-            "required": ["taxid"]
+            }
         },
         "input_output_options": {
             "title": "Input/output options",

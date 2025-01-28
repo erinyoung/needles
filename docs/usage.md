@@ -66,7 +66,7 @@ with:
 ```yaml title="params.yaml"
 input: './samplesheet.csv'
 outdir: './results/'
-taxid: '727'
+taxid: 'tx:727'
 <...>
 ```
 

@@ -8,7 +8,7 @@ include { ASSIGN                 } from '../modules/local/assign'
 include { VISUALIZE              } from '../modules/local/visualize'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
 include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils_nfcore_pipeline'
-include { DB_INFO                 } from '../subworkflows/local/local'
+include { DECOMPRESS } from '../modules/local/decompress.nf'
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,30 +19,48 @@ include { DB_INFO                 } from '../subworkflows/local/local'
 workflow NEEDLES {
 
     take:
-    ch_fastas // channel: fastas read in from --input
+    ch_fastas      // channel: fastas read in from --input
     ch_query_list  // channel: samplesheet converted to query list from --input
+    ch_url         // channel: url for poppunk database
+    ch_db          // channel: predownloaded, prepared, and compressed poppunk database
 
     main:
 
     ch_versions = Channel.empty()
 
-    // use taxid to get url for database download
-    DB_INFO(params.taxid)
+    if (ch_db) {
+        ch_db_file = ch_url
+    } else {
+        // download a database and extract it
+        DOWNLOAD (
+            ch_url
+        )
+        ch_versions = ch_versions.mix(DOWNLOAD.out.versions)
+        ch_db_file = DOWNLOAD.out.file
+    }
 
-    // download a database and extract it
-    DOWNLOAD (
-        DB_INFO.out.download_url
+    // decompress a database
+    DECOMPRESS (
+        ch_db_file
     )
+    ch_versions = ch_versions.mix(DECOMPRESS.out.versions)
+
+    DECOMPRESS.out.db
+        .flatten()
+        .filter { it -> !(it =~ /versions.yml/ )}
+        .set { ch_assign }
 
     // run assign
     ASSIGN (
-        ch_query_list, ch_fastas.collect(), DOWNLOAD.out.db
+        ch_query_list,
+        ch_fastas.collect(),
+        ch_assign
     )
     ch_versions = ch_versions.mix(ASSIGN.out.versions)
 
     // create newick files
     VISUALIZE (
-        DOWNLOAD.out.db,
+        DECOMPRESS.out.db,
         ASSIGN.out.db
     )
     ch_versions = ch_versions.mix(VISUALIZE.out.versions)

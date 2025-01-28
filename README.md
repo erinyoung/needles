@@ -12,13 +12,13 @@
 
 ## Introduction
 
-**erinyoung/needles** is a bioinformatics pipeline to download a corresponding pre-built poppunk database to use on input fasta files.
+**erinyoung/needles** is a bioinformatics pipeline to download or use a corresponding pre-built poppunk database to use on input fasta files.
 
 The steps are as follows:
 
 1. Download the poppunk database for taxid (https://www.bacpop.org/poppunk/)
 2. Assign fasta files to clusters
-3. Visualize (for microreact is the default)
+3. Visualize (microreact is the default)
 
 ## Usage
 
@@ -36,39 +36,41 @@ sample1,sample1.fasta
 
 Each row represents a fasta file.
 
-The next step is to select a taxid. A list of poppunk databases are in json format at (assets/poppunk*db.json)(./assets/poppunk_db.json). The default taxid is `1314` for \_Streptococcus pyogenes*.
+### Option 1. Downloading a poppunk database
+
+A list of poppunk databases are in json format at (assets/poppunk*db.json)(./assets/poppunk_db.json). The default taxid is `tx:1314` for *Streptococcus pyogenes\*.
 
 Current options for taxid:
 
-- "470" : "Acinetobacter baumannii"
-- "520" : "Bordetella pertussis"
-- "197" : "Campylobacter jejuni"
-- "5476" : "Candida albicans"
-- "1351" : "Enterococcus faecalis"
-- "1352" : "Enterococcus faecium"
-- "562" : "Escherichia coli"
-- "727" : "Haemophilus influenzae"
-- "210" : "Helicobacter pylori"
-- "197911" : "Influenza virus"
-- "573" : "Klebsiella pneumoniae"
-- "446" : "Legionella pneumophila"
-- "1639" : "Listeria monocytogenes"
-- "36809" : "Mycobacterium abscessus"
-- "1773" : "Mycobacterium tuberculosis"
-- "485" : "Neisseria gonorrhoeae"
-- "487_2" : "Neisseria meningitidis" from "https://doi.org/10.12688/wellcomeopenres.14826.1"
-- "487" : "Neisseria meningitidis" from "https://github.com/bacpop/PopPUNK/issues/267"
-- "287" : "Pseudomonas aeruginosa"
-- "4932" : "Saccharomyces cerevisiae"
-- "590" : "Salmonella sp."
-- "1280" : "Staphylococcus aureus",
-- "40324" : "Stenotrophomonas maltophilia"
-- "1311" : "Streptococcus agalactiae"
-- "1334" : "Streptococcus dysgalactiae subspecies equisimilis"
-- "28037" : "Streptococcus mitis",
-- "1313" : "Streptococcus pneumoniae"
-- "1314" : "Streptococcus pyogenes"
-- "1307" : "Streptococcus suis"
+- "tx:470" : "Acinetobacter baumannii"
+- "tx:520" : "Bordetella pertussis"
+- "tx:197" : "Campylobacter jejuni"
+- "tx:5476" : "Candida albicans"
+- "tx:1351" : "Enterococcus faecalis"
+- "tx:1352" : "Enterococcus faecium"
+- "tx:562" : "Escherichia coli"
+- "tx:727" : "Haemophilus influenzae"
+- "tx:210" : "Helicobacter pylori"
+- "tx:197911" : "Influenza virus"
+- "tx:573" : "Klebsiella pneumoniae"
+- "tx:446" : "Legionella pneumophila"
+- "tx:1639" : "Listeria monocytogenes"
+- "tx:36809" : "Mycobacterium abscessus"
+- "tx:1773" : "Mycobacterium tuberculosis"
+- "tx:485" : "Neisseria gonorrhoeae"
+- "tx:487_2" : "Neisseria meningitidis" from "https://doi.org/10.12688/wellcomeopenres.14826.1"
+- "tx:487" : "Neisseria meningitidis" from "https://github.com/bacpop/PopPUNK/issues/267"
+- "tx:287" : "Pseudomonas aeruginosa"
+- "tx:4932" : "Saccharomyces cerevisiae"
+- "tx:590" : "Salmonella sp."
+- "tx:1280" : "Staphylococcus aureus",
+- "tx:40324" : "Stenotrophomonas maltophilia"
+- "tx:1311" : "Streptococcus agalactiae"
+- "tx:1334" : "Streptococcus dysgalactiae subspecies equisimilis"
+- "tx:28037" : "Streptococcus mitis",
+- "tx:1313" : "Streptococcus pneumoniae"
+- "tx:1314" : "Streptococcus pyogenes"
+- "tx:1307" : "Streptococcus suis"
 
 Now, you can run the pipeline using:
 
@@ -77,6 +79,16 @@ nextflow run erinyoung/needles \
    -profile <docker/singularity/.../institute> \
    --input samplesheet.csv \
    --taxid <TAXID> \
+   --outdir <OUTDIR>
+```
+
+### Option 2. Using a pre-downloaded poppunk database
+
+```bash
+nextflow run erinyoung/needles \
+   -profile <docker/singularity/.../institute> \
+   --input samplesheet.csv \
+   --db <path/to/poppunk/database/file> \
    --outdir <OUTDIR>
 ```
 

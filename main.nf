@@ -36,7 +36,9 @@ workflow {
         params.monochrome_logs,
         args,
         params.outdir,
-        params.input
+        params.input,
+        params.taxid,
+        params.db
     )
 
     //
@@ -44,7 +46,9 @@ workflow {
     //
     NEEDLES (
         PIPELINE_INITIALISATION.out.fastas,
-        PIPELINE_INITIALISATION.out.query_list
+        PIPELINE_INITIALISATION.out.query_list,
+        PIPELINE_INITIALISATION.out.db,
+        params.db
     )
 
     //

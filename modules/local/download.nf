@@ -3,7 +3,7 @@ process DOWNLOAD {
     label 'process_low'
 
     // using same container as other processes for simplicity
-    conda "bioconda::poppunk=2.7.0"
+    conda "bioconda::poppunk=2.7.5"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/poppunk:2.7.0--py310h048fc13_0':
         'biocontainers/poppunk:2.7.0--py310h048fc13_0' }"
@@ -12,29 +12,31 @@ process DOWNLOAD {
     tuple val(species), val(url)
 
     output:
-    tuple val(species), path("*"), emit: db
-    //just downloading a file, no version to report
-    //path "versions.yml", emit: versions
+    path("*z*"), emit: file
+    path "versions.yml", emit: versions
 
     when:
     task.ext.when == null || task.ext.when
 
     script:
     """
-    # download database with url
     wget $url
 
-    # decompress it
-    tar -xvjf *bz2
-
-    # remove it
-    rm -rf *bz2
-
-    db=\$(ls -d * )
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        species: ${species}
+        db_url: ${url}
+    END_VERSIONS
     """
 
     stub:
     """
     mkdir db
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        species: ${species}
+        db_url: ${url}
+    END_VERSIONS
     """
 }
