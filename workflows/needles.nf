@@ -69,7 +69,7 @@ workflow NEEDLES {
             sort: true,
             newLine: true
         )
-        .set { ch_collated_versions }
+    //    .set { ch_collated_versions }
 
 
     summary_params = paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")
