@@ -12,19 +12,38 @@ process DECOMPRESS {
     val(file)
 
     output:
-    path "*", emit: db
+    path "db/*", emit: db
+    path "versions.yml", emit: versions
 
     when:
     task.ext.when == null || task.ext.when
 
     script:
     """
+    mkdir db
+
     # decompress it
-    tar -xvjf ${file}
+    tar -xvjf ${file} -C db
+
+    fil=\$(ls db/*/*.h5 | cut -f 3 -d '/' | sed 's/.h5//g')
+
+    mv db/* db/\$fil
+
+    ls db/\$fil/\$fil.h5
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        tar: ${file}
+    END_VERSIONS
     """
 
     stub:
     """
-    mkdir db
+    mkdir -p db/db
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        tar: ${file}
+    END_VERSIONS
     """
 }
