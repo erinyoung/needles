@@ -40,7 +40,7 @@ jobs:
             profile: "singularity"
     steps:
       - name: Check out pipeline code
-        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
+        uses: actions/checkout@main
 
       - name: Set up Nextflow
         uses: nf-core/setup-nextflow@v2
@@ -59,7 +59,7 @@ jobs:
 
       - name: Set up Miniconda
         if: matrix.profile == 'conda'
-        uses: conda-incubator/setup-miniconda@a4260408e20b96e80095f42ff7f1a15b27dd94ca # v3
+        uses: conda-incubator/setup-miniconda@main
         with:
           miniconda-version: "latest"
           auto-update-conda: true
@@ -73,7 +73,7 @@ jobs:
           echo $(realpath python) >> $GITHUB_PATH
 
       - name: Clean up Disk space
-        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be # v1.3.1
+        uses: jlumbroso/free-disk-space@main
 
       - name: "Run pipeline with test data ${{ matrix.NXF_VER }} | ${{ matrix.test_name }} | ${{ matrix.profile }}"
         run: |
