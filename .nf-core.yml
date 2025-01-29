@@ -5,7 +5,10 @@ lint:
   actions_awsfulltest: False
   files_exist:
     - .gitattributes
+    - CHANGELOG.md
+    - .github/workflows/linting_comment.yml
     - assets/multiqc_config.yml
+    - .github/workflows/linting.yml
     - conf/igenomes.config
     - conf/igenomes_ignored.config
     - .github/workflows/branch.yml
@@ -19,6 +22,8 @@ lint:
     - .github/ISSUE_TEMPLATE/config.yml
     - .github/workflows/ci.yml
   files_unchanged:
+    - .github/CONTRIBUTING.md
+    - .github/PULL_REQUEST_TEMPLATE.md
     - .github/workflows/linting.yml
     - .gitignore
     - assets/multiqc_config.yml

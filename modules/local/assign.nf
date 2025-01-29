@@ -10,7 +10,7 @@ process ASSIGN {
     input:
     path qfile
     path fasta
-    path(db)
+    path db
 
     output:
     path "clusters", emit: db
@@ -20,7 +20,7 @@ process ASSIGN {
     task.ext.when == null || task.ext.when
 
     script:
-    def args = task.ext.args ?: ''
+    def args = task.ext.args ?: '--run-qc'
     """
     poppunk_assign \\
         $args \\

@@ -45,16 +45,11 @@ workflow NEEDLES {
     )
     ch_versions = ch_versions.mix(DECOMPRESS.out.versions)
 
-    DECOMPRESS.out.db
-        .flatten()
-        .filter { it -> !(it =~ /versions.yml/ )}
-        .set { ch_assign }
-
     // run assign
     ASSIGN (
         ch_query_list,
         ch_fastas.collect(),
-        ch_assign
+        DECOMPRESS.out.db
     )
     ch_versions = ch_versions.mix(ASSIGN.out.versions)
 
@@ -75,12 +70,12 @@ workflow NEEDLES {
             sort: true,
             newLine: true
         )
-        .set { ch_collated_versions }
+    //    .set { ch_collated_versions }
 
 
-    summary_params = paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")
+    //summary_params = paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")
 
-    versions       = ch_versions                 // channel: [ path(versions.yml) ]
+    //versions       = ch_versions                 // channel: [ path(versions.yml) ]
 
 }
 
